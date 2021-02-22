@@ -1,7 +1,8 @@
 # Todo
 
 Projeto desenvolvido durante os estudos de Javascript com TDD.
-Créditos: [Erick Wendel](https://www.youtube.com/watch?v=9COpZuJzx18&t=660s)
+
+(Créditos: [Erick Wendel](https://www.youtube.com/watch?v=9COpZuJzx18&t=660s))
 
 ## Sumário
 
@@ -20,11 +21,14 @@ Créditos: [Erick Wendel](https://www.youtube.com/watch?v=9COpZuJzx18&t=660s)
 ## Executando os testes
 
 `npm test`: Executa os testes.
+
 `npm run test:dev`: Executa os testes em modo desenvolvimento.
+
 `npm run test:cov`: Executa os testes em modo coverage.
 `npm run test:mut`: Executa os testes em modo mutante.
 
 ## Licença
 
   **MIT**
+  
   Veja [LICENSE.md](LICENSE.md) para mais detalhes.
