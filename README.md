@@ -25,6 +25,7 @@ Projeto desenvolvido durante os estudos de Javascript com TDD.
 `npm run test:dev`: Executa os testes em modo desenvolvimento.
 
 `npm run test:cov`: Executa os testes em modo coverage.
+
 `npm run test:mut`: Executa os testes em modo mutante.
 
 ## Licença
