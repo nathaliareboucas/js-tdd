@@ -22,6 +22,7 @@ Créditos: [Erick Wendel](https://www.youtube.com/watch?v=9COpZuJzx18&t=660s)
 `npm test`: Executa os testes.
 `npm run test:dev`: Executa os testes em modo desenvolvimento.
 `npm run test:cov`: Executa os testes em modo coverage.
+`npm run test:mut`: Executa os testes em modo mutante.
 
 ## Licença
 

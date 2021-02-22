@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "npx mocha --parallel --exit test/",
 		"test:dev": "npx mocha test/ -w",
-		"test:cov": "npx nyc --reporter=html npm test"
+		"test:cov": "npx nyc --reporter=html npm test",
+		"test:mut": "npx stryker run"
 	},
 	"keywords": [],
 	"author": "Nathália Rebouças",
@@ -17,5 +18,9 @@
 		"mocha": "^8.3.0",
 		"nyc": "^15.1.0",
 		"sinon": "^9.2.4"
+	},
+	"devDependencies": {
+		"@stryker-mutator/core": "^4.4.1",
+		"@stryker-mutator/mocha-runner": "^4.4.1"
 	}
 }
