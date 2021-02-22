@@ -17,7 +17,7 @@ class TodoService {
     const today = new Date();
     const todo = {
       ...todoItem,
-      status: when > today ? 'pending' : 'late'
+      status: when >= today ? 'pending' : 'late'
     }
 
     return this.todoRepository.create(todo);

@@ -99,7 +99,7 @@ describe('todoService', () => {
         .to.be.ok;
     })
 
-    it('should save todo item with pending status', () => {
+    it('should save todo item with pending status when today before "when"', () => {
       const properties = {
         text: 'I must walk my dog',
         when: new Date("2021-03-10 08:00:00 GMT-0")
@@ -113,6 +113,33 @@ describe('todoService', () => {
       const data = new Todo(properties);
 
       const today = new Date("2021-03-08");
+      sandbox.useFakeTimers(today.getTime());
+
+      todoService.create(data);
+
+      const expectedCallWith = {
+        ...data,
+        status: "pending"
+      }
+
+      expect(todoService.todoRepository.create.calledOnceWithExactly(expectedCallWith))
+        .to.be.ok;
+    })
+
+    it('should save todo item with pending status when today like "when"', () => {
+      const properties = {
+        text: 'I must walk my dog',
+        when: new Date("2021-03-10 08:00:00 GMT-0")
+      }
+      const expectedId = '000001';
+      
+      const uuid = require('uuid');
+      const fakeUUID = sandbox.fake.returns(expectedId);
+      sandbox.replace(uuid, 'v4', fakeUUID);
+      
+      const data = new Todo(properties);
+
+      const today = new Date("2021-03-10 08:00:00 GMT-0");
       sandbox.useFakeTimers(today.getTime());
 
       todoService.create(data);
